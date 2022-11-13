@@ -25,6 +25,7 @@ try :
         s.close()
 
 except KeyboardInterrupt:
+    print("\n")
     print("Exiting scanner.py")
     sys.exit()
 
