@@ -3,6 +3,9 @@ import socket
 host = "127.0.0.1"
 port = 9990
 
+#define sending and receiving functions
+def Receiving()
+
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.connect((host,port))
 
