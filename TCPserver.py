@@ -1,7 +1,7 @@
 import socket
 import threading
 
-ip = "127.0.0.1"
+ip = "0.0.0.0"
 port = 9999
 
 def main():
