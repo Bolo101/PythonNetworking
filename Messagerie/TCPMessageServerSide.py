@@ -1,6 +1,6 @@
 import socket
 import threading
-host = "127.0.0.1"
+host = "0.0.0.0"
 port = 9990
 
 #Creating functions for sending and receiving data
@@ -32,7 +32,8 @@ sendTh = threading.Thread(target=Sending,args=(client_socket,))
 receiveTh.start()
 sendTh.start()
 
-receiveTh.join()
+receiveTh.join()    #do not execute following instructions if receiveTh not done, here if
+                    #did not break 
     
    
 
