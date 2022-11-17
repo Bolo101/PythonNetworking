@@ -6,7 +6,7 @@ port = 9990
 #Creating functions for sending and receiving data
 def Receive(client):
     while True :
-        request = client_socket.recv(400)
+        request = client_socket.recv(400)      #also work with request = client.recv(400)
         print('Received {}'.format(request.decode('utf-8')))
         if not request : #if client sending is empty
             print('Close')
