@@ -9,7 +9,7 @@ def Receive(client):
         request = client_socket.recv(400)      #also work with request = client.recv(400)
         print('Received {}'.format(request.decode('utf-8')))
         if not request : #if client sending is empty
-            print('Close')
+            print('Closing connection')
             break
 
 def Sending(client):
