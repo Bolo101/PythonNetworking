@@ -1,3 +1,5 @@
+"""Netcat replacement in python3
+"""
 import argparse
 import socket
 import shlex
@@ -37,15 +39,12 @@ if args.listen:
 else :
     buffer = sys.stdin.read()
 
-nc = NetCat(args, buffer.encode())
-nc.run()
-
-class NetCat :
+class NetCat:
     def __init__(self, args, buffer=None):
         self.args = args
         self.buffer = buffer
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.socket.setsockopt(socket.socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+        self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 
     def run (self):
         if self.args.listen:
@@ -116,5 +115,8 @@ class NetCat :
                 except Exception as e:
                     print(f'server killed {e}')
                     self.socket.close()
-                    sys.exit()
+nc = NetCat(args, buffer.encode())
+nc.run()
+
+
                     
