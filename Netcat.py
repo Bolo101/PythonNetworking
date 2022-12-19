@@ -39,6 +39,10 @@ if args.listen:
 else :
     buffer = sys.stdin.read()
 
+
+nc = NetCat(args, buffer.encode())
+nc.run()
+
 class NetCat:
     def __init__(self, args, buffer=None):
         self.args = args
@@ -115,8 +119,4 @@ class NetCat:
                 except Exception as e:
                     print(f'server killed {e}')
                     self.socket.close()
-nc = NetCat(args, buffer.encode())
-nc.run()
-
-
                     
