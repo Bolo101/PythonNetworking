@@ -1,4 +1,6 @@
 #TCPProxy from BlackHatPython
 import sys
 import threading
-import 
+import socket
+
+HEX_FILTER = ''
