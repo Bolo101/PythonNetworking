@@ -21,7 +21,7 @@ try :
     for port in range(50,85):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         socket.setdefaulttimeout(1)
-        result = s.connect_ex((target,port)) #connection return 0 and failed connection 1
+        result = s.connect_ex((target,port)) #successful connection return 0 and failed connection 1
         if result == 0:
             print("Port {} is open".format(port))
         s.close()
