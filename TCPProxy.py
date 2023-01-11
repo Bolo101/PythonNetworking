@@ -1,4 +1,4 @@
-#TCPProxy from BlackHatPython 2nd edition
+#TCPProxy from BlackHatPython 2nd edition by Justin Seitz and Tim Arnold 
 import sys
 import threading
 import socket
